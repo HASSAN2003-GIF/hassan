@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey - Hassan Salum</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f8fc;
+        }
+        
+        .survey {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .survey h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            color: #003366;
+        }
+        
+        .survey form label {
+            display: block;
+            margin: 0.5rem 0 0.25rem;
+            font-weight: bold;
+            color: #003366;
+        }
+        
+        .survey form textarea,
+        .survey form input[type="text"],
+        .survey form input[type="email"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .rating-stars input {
+            display: none;
+        }
+        
+        .rating-stars label {
+            font-size: 2rem;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            padding: 0 5px;
+        }
+        
+        .rating-stars input:checked~label,
+        .rating-stars label:hover,
+        .rating-stars label:hover~label {
+            color: gold;
+        }
+        
+        .survey form input[type="submit"] {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            animation: glow 1.5s infinite alternate;
+            transition: background-color 0.3s;
+        }
+        
+        .survey form input[type="submit"]:hover {
+            background-color: #0055a5;
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #003366;
+            }
+            to {
+                box-shadow: 0 0 20px #0066cc, 0 0 30px #0066cc;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .rating-stars label {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Hassan Salum</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="survey.html">Survey</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="survey">
+            <h2>Feedback Survey</h2>
+            <form action="#" method="POST">
+                <!-- Discovery -->
+                <label>How did you find this site?</label>
+                <label><input type="radio" name="source" value="search" required> Search Engine</label>
+                <label><input type="radio" name="source" value="social"> Social Media</label>
+                <label><input type="radio" name="source" value="friend"> Friend</label>
+
+                <!-- Preferences -->
+                <label>What do you like most about the site?</label>
+                <label><input type="checkbox" name="likes" value="design"> Design</label>
+                <label><input type="checkbox" name="likes" value="content"> Content</label>
+                <label><input type="checkbox" name="likes" value="usability"> Usability</label>
+
+                <!-- Star Rating -->
+                <label>Rate our website services:</label>
+                <div class="rating-stars">
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+                </div>
+
+                <!-- Comments -->
+                <label for="comments">Other Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hassan Salum. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

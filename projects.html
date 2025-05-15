@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Hassan Salum</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .projects {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 2rem;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-grid article {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-grid article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-grid h3 {
+            font-size: 1.4rem;
+            color: #003366;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-grid p {
+            font-size: 1rem;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Hassan Salum</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="survey.html">Survey</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <article>
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal portfolio website built using semantic HTML5, modular CSS, and dynamic JavaScript for user interactivity.</p>
+                </article>
+                <article>
+                    <h3>Form Validator</h3>
+                    <p>An intelligent form validation system that checks input data using JavaScript regular expressions before submission.</p>
+                </article>
+                <article>
+                    <h3>Dark/Light Mode</h3>
+                    <p>A user-controlled theme switcher that toggles between light and dark modes, storing user preference with JavaScript.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hassan Salum. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

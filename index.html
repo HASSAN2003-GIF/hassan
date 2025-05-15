@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Hassan Salum Juma - Web Developer" />
+    <meta name="keywords" content="Hassan Salum Juma, Portfolio, Web Developer, Projects, Contact" />
+    <meta name="author" content="Hassan Salum Juma" />
+    <title>Hassan Salum Juma | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            flex: 1;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .theme-toggle {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            margin-left: auto;
+        }
+        
+        main {
+            flex: 1;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+            background-color: #0066cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #004d99;
+        }
+        
+        .video-section {
+            margin-top: 3rem;
+        }
+        
+        .video-section h3 {
+            color: #003366;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-description {
+            max-width: 800px;
+            margin: 1.5rem auto 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+
+<body onload="greetUser()">
+    <header>
+        <div class="logo">HASSAN SALUM JUMA</div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="survey.html">Survey</a></li>
+            </ul>
+            <button onclick="toggleTheme()" class="theme-toggle">Toggle Theme</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 id="greeting">Welcome</h2>
+            <p>I'm Hassan Salum Juma, a passionate web developer dedicated to building responsive and accessible web experiences.</p>
+            <a href="projects.html" class="cta-button">View My Work</a>
+        </section>
+
+        <!-- YouTube Video Section -->
+        <section class="video-section">
+            <h3>📺 Web Development Tutorial: Introduction to HTML</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU?si=8B0Suv0zDCiRdzbR" title="HTML Tutorial for Beginners" allowfullscreen></iframe>
+            </div>
+            <div class="video-description">
+                <p>
+                    This is a beginner-friendly tutorial on HTML — the foundation of all web pages. Whether you're starting your web development journey or brushing up your knowledge, this video by <strong>Programming with Mosh</strong> walks you through
+                    the basics of HTML5 structure, tags, and how browsers render content.
+                </p>
+                <p>
+                    The video is ideal for those learning to build professional websites and portfolios, just like this one. It's clear, practical, and easy to follow.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hassan Salum Juma. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

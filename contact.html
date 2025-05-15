@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Hassan Salum Juma</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+    <style>
+        .contact {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            color: #003366;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #333;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        label {
+            font-weight: bold;
+            color: #003366;
+        }
+        
+        input,
+        textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        button {
+            background-color: #003366;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+        }
+        
+        button:hover {
+            background-color: #0055a5;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0px #0055a5;
+            }
+            100% {
+                box-shadow: 0 0 15px #0055a5;
+            }
+        }
+        
+        .map-container {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">HASSAN SALUM JUMA</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="survey.html">Survey</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2>Contact Me</h2>
+
+            <div class="contact-info">
+                <p><strong>Name:</strong> Hassan Salum Juma</p>
+                <p><strong>Phone:</strong> <a href="tel:+255711285479">0711 285 479</a></p>
+                <p><strong>Email:</strong> <a href="mailto:hansconicoff@gmail.com">hansconicoff@gmail.com</a></p>
+                <p><strong>Address:</strong> University of Dodoma, College of Informatics and Virtual Education, Dodoma, Tanzania</p>
+            </div>
+
+            <form id="contactForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="map-container">
+                <h3>📍 My Location</h3>
+                <!-- Replace the src below with your actual Google Map embed URL -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126429.74466542073!2d35.6833077!3d-6.1731102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184e8f9b2656e6b9%3A0x4fc5d51568c5d28!2sUniversity%20of%20Dodoma!5e0!3m2!1sen!2stz!4v1715705112345"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hassan Salum Juma. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
